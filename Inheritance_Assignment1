@@ -1,0 +1,49 @@
+                                   INHERITENCE
+*Assignment1: * 
+===========
+     Package   :org.system
+     Class        :Computer
+     Methods   :computerModel()
+
+     Class        :Desktop
+     Methods   :desktopSize()
+
+Description:
+create above 2 class and call all your class methods into the Desktop using single inheritance.
+//ComputerSingleInheritance.java
+package org.system;
+
+public class CompSingleInheritance 
+{
+	public static void main(String[] args) 
+	{
+		Desktop comp=new Desktop();
+		comp.computerModel();
+		comp.desktopSize();
+	
+	}
+}
+
+//Computer.java
+package org.system;
+
+public class Computer 
+{
+  public void computerModel()
+  {
+	  System.out.println("Model : Dell Inspiron 3268 ");
+	  
+  }
+}
+
+//Desktop.java
+package org.system;
+
+public class Desktop extends Computer
+{
+      public void desktopSize()
+	  {		 
+		 System.out.println("Size - 21.5inch");		  
+	  }
+}
+
