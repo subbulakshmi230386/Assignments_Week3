@@ -1,0 +1,104 @@
+
+Assignment 1:
+     Interface :HardWare
+     Methods   :hardwareResources()
+
+     Interface :Software
+     Methods   :softwareResources()
+
+     Class     :Desktop
+     Methods   :desktopModel()
+
+Description:
+create 2 Interface and archieve multiple inheritance.
+-------------------------------------------------------------------------------
+//Desktop.java
+package abstractclass;
+
+public  class Desktop implements SoftWare,HardWare
+{
+
+	public void softwareResource()
+	{		
+		System.out.println("Software Resource");
+	}
+
+	public void hardwareResource() 
+	{		
+		System.out.println("Hardware Resource");
+	}
+
+	public void desktopModel()
+	{
+	   System.out.println("Desktop Model");
+	}
+  public static void main(String[] args)
+  {
+	Desktop d = new Desktop();
+	d.hardwareResource();
+	d.softwareResource();
+	d.desktopModel();
+  }	
+} 
+
+//Hardware.java
+package abstractclass;
+
+public interface HardWare
+{
+	public void hardwareResource() ;
+	
+	
+}
+//Software.java
+package abstractclass;
+
+public interface SoftWare
+{
+	public void softwareResource() ;
+}
+---------------------------------------------Assignment1 End--------------------------------------------------
+Assignment 2:
+     AbstractClass     :University
+     Methods              : pg()(implemented method), ug() (unimplemented method)
+
+     Class        :College extends University
+     Methods   :ug()
+
+Description:
+ug() is just a templete in University Abstract class and You have to implement the method ug() in College class.
+Execute both ug() & pg()
+----------------------------------------------------------------------------------------
+
+package abstractclass;
+
+public class College extends University{
+
+public static void main(String[] args) {
+	College col= new College();
+			col.ug();
+	        col.pg();
+}
+
+@Override
+public void ug() 
+ {	
+	System.out.println("UG :Under Graduate Degree");
+ }
+}
+---------------------------------------------------------------------------------------------------------------
+
+//University.java
+
+package abstractclass;
+
+public abstract class University
+{
+  public void pg()
+  {
+	  System.out.println("PG :Post Graduate Degree");
+  }
+  public abstract void ug();
+}
+------------------------------Assignment 2 End------------------------------------------------------
+
