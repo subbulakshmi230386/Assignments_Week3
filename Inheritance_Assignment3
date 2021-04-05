@@ -1,0 +1,47 @@
+Assignment3:
+============
+    Class     :BankInfo
+    Methods :saving(),fixed(),deposit()
+
+     Class     :AxisBank
+     Methods :deposit()
+
+Description:
+You have to override the method deposit in AxisBank.
+//BankInfo.java
+package overriding;
+
+public class BankInfo 
+{
+   public void savings()
+   {
+     System.out.println("Savings Account");
+   }
+   public void fixed()
+   {
+	   System.out.println(" Fixed Amount is Deposited");
+   }
+   public void deposit()
+   {
+      System.out.println("Deposit Amount is : 25000");
+   }
+}
+------------------------------------
+//AxisBank.java
+package overriding;
+
+public class AxisBank extends BankInfo  
+{
+	public static void main(String[] args) 
+	{
+		AxisBank a =new AxisBank();
+		a.deposit();
+		a.savings();
+		a.fixed();			
+    }
+	
+	public void deposit()
+	   {
+	      System.out.println("Deposit Amount is : 35000");
+	   }
+}
